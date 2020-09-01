@@ -10,4 +10,4 @@ if last_digit > 5:
 elif last_digit < 6 and last_digit != 0:
     print(message, "and is less than 6 and not 0")
 else:
-    print(message, "and is zero")
+    print(message, "and is 0")
