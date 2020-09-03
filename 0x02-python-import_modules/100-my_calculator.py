@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from calculator_1.py import add, sub, mul, div
+    from calculator_1 import add, sub, mul, div
     import sys
     if len(sys.argv) != 4:
         sys.stderr.write('Usage: ./100-my_calculator.py <a> <operator> <b>\n')
         exit(1)
     operator = sys.argv[2]
     a = int(sys.argv[1])
-    b = int(sys.argv[2])
+    b = int(sys.argv[3])
     if str(operator) not in("+", "-", "*", "/"):
         sys.stderr.write('Unknown operator. Available \
         operators: +, -, * and /\n')
