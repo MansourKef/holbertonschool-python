@@ -10,7 +10,7 @@ if __name__ == "__main__":
     if operator != "*":
         b = int(sys.argv[3])
     else:
-        b = int(sys.argv[len(sys.argv) - 1)
+        b = int(sys.argv[len(sys.argv) - 1])
     if str(operator) not in("+", "-", "*", "/"):
         sys.stderr.write('Unknown operator. Available \
         operators: +, -, * and /\n')
