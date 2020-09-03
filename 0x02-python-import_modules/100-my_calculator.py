@@ -2,12 +2,15 @@
 if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     import sys
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 4 and sys.argv[2] != "*":
         sys.stderr.write('Usage: ./100-my_calculator.py <a> <operator> <b>\n')
         exit(1)
     operator = sys.argv[2]
     a = int(sys.argv[1])
-    b = int(sys.argv[3])
+    if operator != "*":
+        b = int(sys.argv[3])
+    else:
+        b = int(sys.argv[len(sys.argv) - 1)
     if str(operator) not in("+", "-", "*", "/"):
         sys.stderr.write('Unknown operator. Available \
         operators: +, -, * and /\n')
