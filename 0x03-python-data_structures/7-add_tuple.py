@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
-    if tuple_a == "()":
+    if tuple_a == ():
         return tuple_b
-    if tuple_b == "()":
+    if tuple_b == ():
         return tuple_a
     if len(tuple_a) >= 2 & len(tuple_b) >= 2:
         tuple_c = ("({}, {})".format(
