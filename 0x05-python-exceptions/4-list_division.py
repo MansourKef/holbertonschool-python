@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def list_division(my_list_1, my_list_2, list_length):
-    if isinstance(my_list_1, list) and isinstance(my_list_2, list) and isinstance(list_length, int):
+    if isinstance(my_list_1, list) and isinstance(
+            my_list_2, list) and isinstance(list_length, int):
         new_list = [None] * list_length
         for i in range(0, list_length):
             try:
