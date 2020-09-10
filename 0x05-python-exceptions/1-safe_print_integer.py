@@ -4,6 +4,5 @@ def safe_print_integer(value):
         if value >= 0 or value <= 0:
             print("{:d}".format(value))
             return True
-        return False
     except:
-        pass
+        return False
