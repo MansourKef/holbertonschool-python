@@ -13,7 +13,7 @@ def list_division(my_list_1, my_list_2, list_length):
         except:
             pass
         finally:
-            if new_list[i] == None:
+            if new_list[i] is None:
                 new_list[i] = 0
             else:
                 new_list[i] = float(new_list[i])
