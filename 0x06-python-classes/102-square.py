@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+B#!/usr/bin/python3
 """
     102-square.py
     Module that defines a Square with getter and setter
@@ -24,7 +24,7 @@ class Square():
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
-            raise ValueError("ize must be >= 0")
+            raise ValueError("size must be >= 0")
         else:
             self.__size = value
 
