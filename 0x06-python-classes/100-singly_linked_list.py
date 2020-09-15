@@ -40,12 +40,12 @@ class Node():
         else:
             self.__next_node = value
 
+
 class SinglyLinkedList():
     """
         100-singly_linked_list.py
         Modules Defines SinglyLinkedList
     """
-
 
     def __init__(self):
         """This is init function of this Class
