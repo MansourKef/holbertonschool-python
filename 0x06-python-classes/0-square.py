@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """
     0-square.py
-    Modules Defines Square Class Return {}    
+    Module that defines a Square return {}
 """
+
+
 class Square:
     """This is An Empty Class Called Squre"""
     pass
