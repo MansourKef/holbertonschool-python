@@ -39,12 +39,11 @@ class Square():
         """Sets The Value Of The __position Based On Some conditions"""
         if not isinstance(value, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
-        if len(value) != 2:
+        elif len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if not all(i >= 0 for i in value):
+        elif any(v < 0 for v in value):
             raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            self.__position = value
+        self.__position = value
 
     def area(self):
         """Function That Returns the square area of the Square"""
