@@ -1,4 +1,4 @@
-B#!/usr/bin/python3
+#!/usr/bin/python3
 """
     102-square.py
     Module that defines a Square with getter and setter
