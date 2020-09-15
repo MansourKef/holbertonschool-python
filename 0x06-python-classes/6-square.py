@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+    6-square.py
+    Module that defines a Square With Fctions
+"""
+
+
 class Square():
     """This is An Square Class Based On The
     Square Class"""
