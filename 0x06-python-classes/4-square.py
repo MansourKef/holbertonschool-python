@@ -12,7 +12,7 @@ class Square():
         """This is init function of this Class
         that sets the Value of size"""
         self.size = size
-    
+
     @property
     def size(self):
         """Gets The Value Of The __size"""
