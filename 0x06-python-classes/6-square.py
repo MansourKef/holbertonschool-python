@@ -50,16 +50,6 @@ class Square():
         return self.__size * self.__size
 
     def my_print(self):
-        """Function prints # Based on Size Value"""
-        if self.__size == 0:
-            print()
-        else:
-            for i in range(self.__size):
-                for j in range(self.__size):
-                    print("#", end='')
-                print()
-
-    def my_print(self):
         """ Function that prints the area based on the size and position
         """
         if self.__size != 0:
