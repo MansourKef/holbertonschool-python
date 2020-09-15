@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+    3-square.py
+    Module that defines a Square with fct area
+"""
+
+
 class Square():
     """This is An Square Class Based On The
     Square Class"""

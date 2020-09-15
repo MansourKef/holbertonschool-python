@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+    1-square.py
+    Module that defines a Square return {}
+"""
+
+
 class Square():
     """This is An Square Class Based On The
     Square Class In File 0-square.py"""

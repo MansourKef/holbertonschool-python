@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+    4-square.py
+    Module that defines a Square with getter and setter
+"""
+
+
 class Square():
     """This is An Square Class Based On The
     Square Class"""

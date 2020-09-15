@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+    2-square.py
+    Module that defines a Square Class with pvt Att
+"""
+
+
 class Square():
     """This is An Square Class Based On The
     Square Class"""
