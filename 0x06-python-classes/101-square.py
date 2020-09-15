@@ -69,4 +69,17 @@ class Square():
 
     def __str__(self):
         """Redefining Print Function"""
-        return str(self.my_print())
+        s = ""
+        if self.__size != 0:
+            for k in range(self.__position[1]):
+                s += "\n"
+
+            for i in range(self.__size):
+                for l in range(self.__position[0]):
+                    s += " "
+                for j in range(self.__size):
+                    s += "#"
+                s += "\n"
+        else:
+            s += "\n"
+        return s[:-1]
