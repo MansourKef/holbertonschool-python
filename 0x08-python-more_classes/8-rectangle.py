@@ -1,0 +1,111 @@
+#!/usr/bin/python3
+"""
+    1-rectangle.py
+    Module that defines a Rectangle return {}
+"""
+
+
+class Rectangle:
+    """This is A Class Called Rectangle"""
+    number_of_instances = 0
+    print_symbol = '#'
+
+    def __init__(self, width=0, height=0):
+        """Instance Of The Class That Sets The Values"""
+        self.height = height
+        self.width = width
+        Rectangle.number_of_instances = Rectangle.number_of_instances + 1
+
+    @property
+    def width(self):
+        """Gets The Value Of The __width"""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """Sets The Value Of The __width Based On Some conditions"""
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = value
+
+    @property
+    def height(self):
+        """Gets The Value Of The __height"""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """Sets The Value Of The __height Based On Some conditions"""
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = value
+
+    def area(self):
+        """Returns the area of the roctange"""
+        return self.__height * self.__width
+
+    def perimeter(self):
+        """
+        Retuns the bvalue of the perimiter if
+        if width or height is equal to 0, perimeter
+        is equal to 0
+        """
+        if self.__height == 0 or self.__width == 0:
+            return 0
+        return 2 * (self.__height + self.__width)
+
+    def __str__(self):
+        """ Return the rectangle with the print_symbol"""
+        s = ""
+        if self.__height != 0 and self.__width != 0:
+            for i in range(self.__height):
+                s += (str(self.print_symbol) * self.__width)
+                if i != self.__height - 1:
+                    s += '\n'
+        return s
+
+    def __repr__(self):
+        """ Return a string to create a new rectange instance"""
+        return "Rectangle({}, {})".format(self.width, self.height)
+
+    def __del__(self):
+        """
+        Return A Messags when en instance is deleted
+        and decrement Counter
+        """
+        Rectangle.number_of_instances = Rectangle.number_of_instances - 1
+        print("Bye rectangle...")
+
+    def bigger_or_equal(rect_1, rect_2):
+        """
+        Function that compares 2 rectangles
+        and retun the result
+        """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        else:
+            return rect_2
+
+my_rectangle_1 = Rectangle(8, 4)
+my_rectangle_2 = Rectangle(2, 3)
+
+if my_rectangle_1 is Rectangle.bigger_or_equal(my_rectangle_1, my_rectangle_2):
+    print("my_rectangle_1 is bigger or equal to my_rectangle_2")
+else:
+    print("my_rectangle_2 is bigger than my_rectangle_1")
+my_rectangle_2.width = 10
+my_rectangle_2.height = 5
+if my_rectangle_1 is Rectangle.bigger_or_equal(my_rectangle_1, my_rectangle_2):
+    print("my_rectangle_1 is bigger or equal to my_rectangle_2")
+else:
+    print("my_rectangle_2 is bigger than my_rectangle_1")
