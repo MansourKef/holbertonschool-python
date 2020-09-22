@@ -81,7 +81,7 @@ class Rectangle:
         """
         Rectangle.number_of_instances = Rectangle.number_of_instances - 1
         print("Bye rectangle...")
-    
+
     def bigger_or_equal(rect_1, rect_2):
         """
         Function that compares 2 rectangles
