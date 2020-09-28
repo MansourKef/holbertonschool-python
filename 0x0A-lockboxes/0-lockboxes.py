@@ -6,9 +6,9 @@ def canUnlockAll(boxes):
     false if any box wont be unlocked
     """
     if boxes is None:
-        raise TypeError("boxes can't be None")
+        raise TypeError()
     if not all(isinstance(el, list) for el in boxes):
-        raise TypeError("Boxes should be list of lists")
+        raise TypeError()
     if len(boxes) == 1:
         """
         By default the first box is unlocked
