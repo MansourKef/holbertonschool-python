@@ -6,9 +6,9 @@ def canUnlockAll(boxes):
     false if any box wont be unlocked
     """
     if boxes is None:
-        raise TypeError()
+        raise TypeError("boxes can't be None")
     if not all(isinstance(el, list) for el in boxes):
-        raise TypeError()
+        raise TypeError("boxes should only be a list of lists")
     if len(boxes) == 1:
         """
         By default the first box is unlocked
@@ -35,7 +35,7 @@ def canUnlockAll(boxes):
                     """
                     add only the new unlocked boxes in the list
                     """
-                    if boxes[i][j] not in UnlockedBoxes:
+                    if boxes[i][j] not in UnlockedBoxes and boxes[i][j] < len(boxes):
                         UnlockedBoxes.append(boxes[i][j])
         """
         return the result
