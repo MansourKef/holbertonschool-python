@@ -35,7 +35,8 @@ def canUnlockAll(boxes):
                     """
                     add only the new unlocked boxes in the list
                     """
-                    if boxes[i][j] not in UnlockedBoxes and boxes[i][j] < len(boxes):
+                    if boxes[i][j] not in UnlockedBoxes \
+                            and boxes[i][j] < len(boxes):
                         UnlockedBoxes.append(boxes[i][j])
         """
         return the result
