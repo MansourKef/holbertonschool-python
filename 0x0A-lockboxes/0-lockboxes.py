@@ -5,6 +5,8 @@ def canUnlockAll(boxes):
     true if all the boxes will be unlocked
     false if any box wont be unlocked
     """
+    if not all(isinstance(el, list) for el in boxes):
+        raise TypeError("Boxes should be list of lists")
     if len(boxes) == 1:
         """
         By default the first box is unlocked
