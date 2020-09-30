@@ -19,9 +19,13 @@ TypeError: name must be an integer
 Send value = 0 to age
 >>> BaseGeometry.integer_validator(BaseGeometry, "age", 0)
 Traceback (most recent call last):
-[ValueError] age must be greater than 0
+ValueError: age must be greater than 0
 
 Send Negative value to distance
 >>> BaseGeometry.integer_validator(BaseGeometry, "distance", -4)
 Traceback (most recent call last):
-[ValueError] distance must be greater than 0
+ValueError: distance must be greater than 0
+
+Send Valid Values
+>>> BaseGeometry.integer_validator(BaseGeometry, "my_int", 12)
+
