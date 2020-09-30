@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module 11-square.py"""
 
 
 Rectangle = __import__("9-rectangle").Rectangle
@@ -15,7 +16,7 @@ class Square(Rectangle):
 
     def area(self):
         """Return the area"""
-        return Rectangle.area(self)
+        return self.__size * self.__size
 
     def __str__(self):
         """change the print fct output"""
