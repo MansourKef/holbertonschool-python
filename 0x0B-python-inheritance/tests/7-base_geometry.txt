@@ -29,3 +29,17 @@ ValueError: distance must be greater than 0
 Send Valid Values
 >>> BaseGeometry.integer_validator(BaseGeometry, "my_int", 12)
 
+Send Missing Argument Value
+>>> BaseGeometry.integer_validator(BaseGeometry, "width")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Send None Value
+>>> BaseGeometry.integer_validator(BaseGeometry, "width", None)
+Traceback (most recent call last):
+TypeError: width must be an integer
+
+Send 2 arguments as None
+>>> BaseGeometry.integer_validator(BaseGeometry, None, None)
+Traceback (most recent call last):
+TypeError: None must be an integer
