@@ -7,8 +7,8 @@ def inherits_from(obj, a_class):
      inhertid from a_class
      """
     if a_class == type(obj):
-        return  False
+        return False
     elif a_class in type(obj).mro():
         return True
     else:
-        return  False
+        return False
