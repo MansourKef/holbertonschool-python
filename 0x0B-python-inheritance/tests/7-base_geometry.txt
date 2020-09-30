@@ -43,3 +43,13 @@ Send 2 arguments as None
 >>> BaseGeometry.integer_validator(BaseGeometry, None, None)
 Traceback (most recent call last):
 TypeError: None must be an integer
+
+Send only self as arguments
+>>> BaseGeometry.integer_validator(BaseGeometry)
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Send 0 arguments
+>>> BaseGeometry.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
