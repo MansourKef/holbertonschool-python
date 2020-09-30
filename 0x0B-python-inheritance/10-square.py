@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Module 10-square.py"""
+
+
 class Square(Rectangle):
     """This is A Class Called Square"""
 
