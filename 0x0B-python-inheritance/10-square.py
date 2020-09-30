@@ -10,7 +10,7 @@ class Square(Rectangle):
 
     def __init__(self, size):
         """Instance of the class with width and height"""
-        super().__init__(self, size, size)
+        super().__init__(size, size)
         self.__size = size
         Rectangle.integer_validator(self, "size", self.__size)
 
