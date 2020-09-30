@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Module 4-inherits_from.py"""
+
+
 def inherits_from(obj, a_class):
     """check if the class of obj
      inhertid from a_class
