@@ -7,21 +7,21 @@ Using ``integer_validator``
 This is a text file to test the 7-base_geometry module.  First import
 ``integer_validator`` from the ``7-base_geometry`` module:
 
->>> integer_validator = __import__('7-base_geometry').integer_validator
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Now Use with:
 
 Send A none Integer Type
->>> integer_validator("name", "John")
+>>> BaseGeometry.integer_validator(BaseGeometry, "name", "John")
 Traceback (most recent call last):
 TypeError: name must be an integer
 
 Send value = 0 to age
->>> integer_validator("age", 0)
+>>> BaseGeometry.integer_validator(BaseGeometry, "age", 0)
 Traceback (most recent call last):
 [ValueError] age must be greater than 0
 
 Send Negative value to distance
->>> integer_validator("distance", -4)
+>>> BaseGeometry.integer_validator(BaseGeometry, "distance", -4)
 Traceback (most recent call last):
 [ValueError] distance must be greater than 0
