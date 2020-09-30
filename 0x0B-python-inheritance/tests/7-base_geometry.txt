@@ -11,7 +11,7 @@ This is a text file to test the 7-base_geometry module.  First import
 
 Now Use with:
 
-Send A none Integer Type
+Send Value as string Type
 >>> BaseGeometry.integer_validator(BaseGeometry, "name", "John")
 Traceback (most recent call last):
 TypeError: name must be an integer
@@ -63,5 +63,10 @@ TypeError: location must be an integer
 
 Send Value as list of integer
 >>> BaseGeometry.integer_validator(BaseGeometry, "location", [1, 4])
+Traceback (most recent call last):
+TypeError: location must be an integer
+
+Send Value as list of lists
+>>> BaseGeometry.integer_validator(BaseGeometry, "location", [[1, 2], [2, 3]])
 Traceback (most recent call last):
 TypeError: location must be an integer
