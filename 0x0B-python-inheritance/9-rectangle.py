@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Module 9-rectangle.py"""
+
+
 class Rectangle(BaseGeometry):
     """This is A Class Called Rectangle"""
     def __init__(self, width, height):
