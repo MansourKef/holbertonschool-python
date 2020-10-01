@@ -6,9 +6,9 @@ Module 11
 
 class Student:
     """
-    Class Student    
+    Class Student
     """
-    
+
     def __init__(self, first_name, last_name, age):
         """ Class Student Init of the class"""
         self.first_name = first_name
