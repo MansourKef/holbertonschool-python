@@ -12,10 +12,6 @@ class Student:
     Class Student    
     """
     
-    first_name = ""
-    last_name = ""
-    age = ""
-
     def __init__(self, first_name, last_name, age):
         """ Class Student Init of the class"""
         self.first_name = first_name
@@ -26,4 +22,4 @@ class Student:
         """that retrieves a dictionary representation
         of a Student instance
         """
-        return (json.dumps(self))
+        return self.__dict__
