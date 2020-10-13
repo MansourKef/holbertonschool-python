@@ -18,6 +18,8 @@ def minOperations(n):
         count = 0
         TargetStr = "H" * n
         while len(CurrStr) != len(TargetStr):
+            if len(CurrStr) > len(TargetStr):
+                return 0
             if len(CurrStr) < len(TargetStr) / 2:
                 addStr = CurrStr
                 count += 1
