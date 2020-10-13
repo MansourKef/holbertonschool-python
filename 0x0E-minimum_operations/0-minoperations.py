@@ -20,7 +20,7 @@ def minOperations(n):
         while len(CurrStr) != len(TargetStr):
             if len(CurrStr) > len(TargetStr):
                 return 0
-            if len(CurrStr) < len(TargetStr) / 2:
+            if len(CurrStr) <= len(TargetStr) / 2:
                 addStr = CurrStr
                 count += 1
             CurrStr = CurrStr + addStr
