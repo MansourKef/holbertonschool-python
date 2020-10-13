@@ -1,0 +1,1 @@
+Minimal operation project
