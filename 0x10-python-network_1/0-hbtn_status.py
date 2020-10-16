@@ -3,7 +3,10 @@
      fetches https://intranet.hbtn.io/status
 """
 
+
 from urllib import (request)
+from sys import argv
+
 
 if __name__ == "__main__":
     req = request.Request("https://intranet.hbtn.io/status")
