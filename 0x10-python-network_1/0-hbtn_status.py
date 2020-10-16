@@ -5,7 +5,6 @@
 
 
 from urllib import (request)
-from sys import argv
 
 
 if __name__ == "__main__":
