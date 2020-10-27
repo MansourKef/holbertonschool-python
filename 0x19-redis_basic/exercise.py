@@ -13,12 +13,11 @@ class Cache:
     """
     Cache Class
     """
-    def __init__(self):
+    def __init__(self) -> None:
         """
         init function
         """
-        r = redis.Redis()
-        self._redis = r
+        self._redis = redis.Redis()
         self_redis.flushdb()
 
     def store(self, data: Union[str, bytes, int, float]) -> str:
