@@ -5,6 +5,7 @@ Module exercise.py
 
 
 import redis
+from uuid import uuid4
 
 
 class Cache:
@@ -16,13 +17,13 @@ class Cache:
         init function
         """
         r = redis.Redis()
-        self.__redis = r
-        r.flushdb()
+        self._redis = r
+        self_redis.flushdb()
 
     def store(self, data):
         """
         store function
         """
-        key = str(self.__redis.randomkey())
-        self.__redis.set(key, data)
+        key = str(uuid4())
+        self._redis.set(key, data)
         return key
