@@ -11,6 +11,6 @@ def list_all(mongo_collection):
     """
     list_all
     """
-    if len(mongo_collection) == 0:
+    if not mongo_collection:
         return []
     return list(mongo_collection.find())
