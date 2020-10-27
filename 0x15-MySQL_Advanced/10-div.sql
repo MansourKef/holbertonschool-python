@@ -1,4 +1,5 @@
 -- Create Function
+DELIMITER |
 DROP FUNCTION IF EXISTS SafeDiv;
 CREATE FUNCTION SafeDiv (a INT, b INT)
 RETURNS FLOAT
@@ -11,3 +12,4 @@ BEGIN
     END IF;
     RETURN result;
 END;
+|
