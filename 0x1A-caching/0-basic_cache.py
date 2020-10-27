@@ -1,27 +1,21 @@
 #!/usr/bin/python3
-"""
-Module 0-basic_cache.py
-"""
-
-
+""" 0-basic_cache.py """
 from base_caching import BaseCaching
 
 
 class BasicCache(BaseCaching):
-    """
-    BasicCache Class
+    """ inherits from BaseCaching and is a caching system
     """
     def put(self, key, item):
-        """
-        Assign Values To Dict
+        """ Add an item in the cache
         """
         if key and item:
-            self.cache_data.append(key, item)
+            self.cache_data[key] = item
 
     def get(self, key):
+        """ 
+        Get an item by key value
         """
-        Get Values From Dict
-        """
-        if key:
-            if self.cache_data.has_key(key):
-                return self.cache_data(key)
+        if key is None or self.cache_data.get(key) is None:
+            return None
+        return self.cache_data.get(key)
