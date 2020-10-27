@@ -4,6 +4,9 @@ Module 0-basic_cache.py
 """
 
 
+from base_caching import BaseCaching
+
+
 class BasicCache(BaseCaching):
     """
     BasicCache Class
