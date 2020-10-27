@@ -6,6 +6,7 @@ Module exercise.py
 
 import redis
 from uuid import uuid4
+from typing import Union, Optional, Callable, List
 
 
 class Cache:
@@ -20,7 +21,7 @@ class Cache:
         self._redis = r
         self_redis.flushdb()
 
-    def store(self, data):
+    def store(self, data: Union[str, bytes, int, float]) -> str:
         """
         store function
         """
