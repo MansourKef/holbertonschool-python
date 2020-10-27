@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+"""
+Module 8-all.py
+"""
+
+
+def list_all(mongo_collection):
+    """
+    list_all
+    """
+    if len(mongo_collection) == 0:
+        print("")
+    for school in mongo_collection:
+        print("{}".format(school.get('name')))
