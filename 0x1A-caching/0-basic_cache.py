@@ -19,4 +19,6 @@ class BasicCache(BaseCaching):
         """
         Get Values From Dict
         """
-        return self.cache_data(key)
+        if key:
+            if self.cache_data.has_key(key):
+                return self.cache_data(key)
